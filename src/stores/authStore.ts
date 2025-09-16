@@ -6,6 +6,9 @@ export interface User {
   name: string;
   section: string;
   username: string;
+  email?: string;
+  phone?: string;
+  employeeId?: string;
 }
 
 interface AuthState {
@@ -14,6 +17,7 @@ interface AuthState {
   login: (username: string, password: string) => Promise<boolean>;
   signup: (userData: Omit<User, 'id'> & { password: string }) => Promise<boolean>;
   logout: () => void;
+  updateUser: (userData: Partial<User>) => void;
 }
 
 // Mock user database
@@ -72,6 +76,14 @@ export const useAuthStore = create<AuthState>()(
 
       logout: () => {
         set({ user: null, isAuthenticated: false });
+      },
+
+      updateUser: (userData) => {
+        const currentUser = get().user;
+        if (currentUser) {
+          const updatedUser = { ...currentUser, ...userData };
+          set({ user: updatedUser });
+        }
       },
     }),
     {
