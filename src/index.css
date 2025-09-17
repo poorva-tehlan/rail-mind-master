@@ -130,7 +130,10 @@ All colors MUST be HSL.
 }
 
 @layer base {
-  * {
+  :root {
+    /* Updated background and foreground */
+    --background: 216 59% 90%; /* #d0e3ff in HSL */
+    --foreground: 222 78% 21%; /* #081f5c in HSL */
     @apply border-border;
   }
 
