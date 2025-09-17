@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Train, Zap, Shield, BarChart3 } from "lucide-react";
 import heroImage from "@/assets/railway-hero.jpg";
+import Logo from "@/assets/railOptimus_Logo.png";
 
 export default function Landing() {
   const features = [
@@ -35,8 +36,13 @@ export default function Landing() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-lg">
-                <Train className="h-6 w-6 text-primary-foreground" />
+              <div className="flex items-center justify-center w-12 h-11 bg-[white] rounded-lg">
+                <img
+                  src={Logo}
+                  alt="Railway control center"
+                  className="w-full h-full object-cover"
+                />
+                {/* <Train className="h-6 w-6 text-primary-foreground" /> */}
               </div>
               <h1 className="text-2xl font-bold text-foreground">
                 R<span className="text-primary">AI</span>lOptimus
@@ -57,14 +63,14 @@ export default function Landing() {
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
-          <img 
-            src={heroImage} 
-            alt="Railway control center" 
+          <img
+            src={heroImage}
+            alt="Railway control center"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-nav/80 to-nav/60" />
         </div>
-        
+
         <div className="relative container mx-auto px-6 py-24">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold text-white mb-6 leading-tight">
@@ -74,8 +80,8 @@ export default function Landing() {
               AI powered decision support system for section controllers
             </p>
             <p className="text-lg text-white/80 mb-10 max-w-2xl">
-              Transform railway operations with intelligent traffic management, 
-              real-time monitoring, and AI-driven decision support designed 
+              Transform railway operations with intelligent traffic management,
+              real-time monitoring, and AI-driven decision support designed
               specifically for section controllers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -98,11 +104,11 @@ export default function Landing() {
               Professional Railway Control
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Built for section controllers who demand precision, safety, and efficiency 
+              Built for section controllers who demand precision, safety, and efficiency
               in railway traffic management.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="p-6 hover:shadow-medium transition-all duration-300 border-border bg-card">
@@ -128,7 +134,7 @@ export default function Landing() {
             Ready to Transform Your Railway Operations?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join section controllers who trust RailOptimus for intelligent 
+            Join section controllers who trust RailOptimus for intelligent
             traffic management and decision support.
           </p>
           <Button size="lg" variant="hero" asChild>
@@ -150,7 +156,7 @@ export default function Landing() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
-              © 2024 RailOptimus. Professional railway control solutions.
+              © 2025 RailOptimus. Professional railway control solutions.
             </p>
           </div>
         </div>
