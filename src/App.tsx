@@ -7,6 +7,9 @@ import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
+import Simulation from "./pages/Simulation";
+import Report from "./pages/Reports";
+import Settings from "./pages/Settings";
 import AppLayout from "./components/layout/AppLayout";
 import ProtectedRoute from "./components/ProtectedRoute";
 import NotFound from "./pages/NotFound";
@@ -38,10 +41,11 @@ const App = () => (
             element={
               <ProtectedRoute>
                 <AppLayout>
-                  <div className="text-center py-12">
+                  <Simulation />
+                  {/* <div className="text-center py-12">
                     <h1 className="text-2xl font-bold mb-4">Simulation Page</h1>
                     <p className="text-muted-foreground">Coming soon...</p>
-                  </div>
+                  </div> */}
                 </AppLayout>
               </ProtectedRoute>
             }
@@ -51,10 +55,7 @@ const App = () => (
             element={
               <ProtectedRoute>
                 <AppLayout>
-                  <div className="text-center py-12">
-                    <h1 className="text-2xl font-bold mb-4">Reports Page</h1>
-                    <p className="text-muted-foreground">Coming soon...</p>
-                  </div>
+                  <Report />
                 </AppLayout>
               </ProtectedRoute>
             }
@@ -64,10 +65,11 @@ const App = () => (
             element={
               <ProtectedRoute>
                 <AppLayout>
-                  <div className="text-center py-12">
+                  <Settings />
+                  {/* <div className="text-center py-12">
                     <h1 className="text-2xl font-bold mb-4">Settings Page</h1>
                     <p className="text-muted-foreground">Coming soon...</p>
-                  </div>
+                  </div> */}
                 </AppLayout>
               </ProtectedRoute>
             }
